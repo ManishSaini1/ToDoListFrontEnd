@@ -1,8 +1,10 @@
 var currentTasks = 0;
 //Enter keyword functionality
 var deleteElements = document.getElementsByClassName("delete");
-document
-  .getElementById("input-description")
+
+
+
+document.getElementById("input-description")
   .addEventListener("keyup", function (event) {
     if (event.keyCode == 13) {
       event.preventDefault();
