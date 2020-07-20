@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <section id="container">
+      <h1 id="first-heading">TODO App</h1>
+      <div id="description">
+        <p>DESCRIPTION</p>
+
+        <input
+          id="input-description"
+          type="text"
+          name="description"
+          placeholder="What do you need to do?"
+          required
+        />
+      </div>
+
+      <div id="add-delete-container">
+        <div id="temp-container">
+          <button  value="ADD TASK" id="add-task-btn"  onclick="addTask();">
+            <span><i class="fa fa-plus" aria-hidden="true"></i> ADD TASK</span>
+          </button>
+          
+        </div>
+      </div>
+      <div id="clear-complete">
+        
+        <span id="complete-all" onclick="completeAll()"><i class="fa fa-check-square-o" aria-hidden="true"></i> Complete All task</span>
+        <span id="clear-all" onclick="clearCompleted()"> Clear completed</span>
+    </div>
+      <div id="all-tasks">
+        <ul id="list">
+
+        </ul>
+      </div>
+      <div id="task-info">
+        <p ><span id="task-left">0</span> tasks left</p>
+     
+     <!-- the type of tasks -->
+         <ul id="task-type">
+             <li onclick="showAll()">
+                 <strong >All</strong>
+             </li>
+             <li onclick="showIncomplete()">
+                 Incomplete
+             </li>
+             <li onclick="showCompleted()">
+                 Completed
+             </li>
+         </ul>
+     </div> 
+    </section>
+    <section id="completed-task"></section>
+  </body>
+  <script src="./script.js"></script>
+</html>
