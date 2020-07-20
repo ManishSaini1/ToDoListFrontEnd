@@ -28,15 +28,11 @@ function addTask() {
     document.getElementById("list").prepend(li);
   }
   currentTasks++;
-
-  console.log(" inside the add function");
   document.getElementById("input-description").value = "";
 
   document.getElementById("task-left").innerText = currentTasks;
 
   for (i = 0; i < deleteElements.length; i++) {
-    console.log(" inside the add function");
-
     deleteElements[i].onclick = function () {
       var parent = this.parentElement;
       parent.style.display = "none";
@@ -46,7 +42,7 @@ function addTask() {
   }
 }
 
-//Marking a list item as done for current object
+//Marking completed selected Task
 var list = document.querySelector("#list");
 list.addEventListener(
   "click",
@@ -71,15 +67,9 @@ function completeAll() {
 function clearCompleted() {
   var tasks = document.querySelectorAll("#list li");
   for (let i = 0; i < tasks.length; i++) {
-    if (
-      tasks[i].className == "checked" &&
-      tasks[i].style.display != "none"
-    ) {
+    if (tasks[i].className == "checked" && tasks[i].style.display != "none") {
       console.log(tasks[i].style.display != "none");
-      console.log("EEEEERRR",tasks[i]);
-
       currentTasks--;
-
       tasks[i].style.display = "none";
     }
   }

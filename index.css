@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  background: rgb(2, 0, 36);
   background: repeating-linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgb(10, 85, 55) 0%,
     rgb(4, 103, 122) 100%
   );
-  position: relative;
+  background-color: #1c92d2;
+  
 }
 
 /* M A I N    C O N T A I N E R */
@@ -18,6 +18,7 @@ body {
   margin-left: 25vw;
   background-color: #242b3e;
   position: absolute;
+
 }
 /* To Do heading */
 #first-heading {
@@ -44,40 +45,14 @@ body {
   margin-left: 2%;
 }
 #input-description {
-  width: 96%;
+  width: 90%;
   height: 10vh;
 
   font-size: 1.3rem;
   padding-left: 2%;
 }
-/* CATEGORY -  DATE   */
-#category-date-container {
-  width: 96%;
-  padding-right: 2%;
-  padding-left: 2%;
-  border-bottom: 1.5px solid white;
-}
-#category-container {
-  width: 45%;
-  padding-right: 2%;
-  padding-bottom: 2%;
-}
-#date-container {
-  width: 45%;
-  padding-left: 2%;
-  border-left: 1.5px solid white;
-  padding-bottom: 2%;
-}
-#category-options {
-  width: 100%;
-  height: 5vh;
-}
-#date {
-  width: 100%;
-  height: 15vh;
-}
 
-/* A D D   D E L E T E     B U T T O N    C O N T A I N R */
+/* A D D   B U T T O N    C O N T A I N R */
 #add-delete-container {
   text-align: center;
   margin-top: 5%;
@@ -90,32 +65,43 @@ body {
   font-weight: 800;
   background-color: rgb(56, 205, 216);
 }
-#task-delte-btn {
-  width: 20%;
-  height: 7vh;
-  font-weight: 800;
-  background-color: rgb(56, 205, 216);
-}
+/* clear and complete buttons */
+#clear-complete {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0%;
+    margin-top: 1%;
+    font-family: monospace;
+    color: rgb(179, 175, 175);
+  }
+  #clear-all {
+    background-color: rgb(47, 154, 255, 0.2);
+    padding: 3px;
+    border-radius: 25px;
+    margin-right: 4px;
+    border: 2px solid rgb(2, 2, 14);
+    float: right;
+    color: white;
+    cursor: pointer;
+  }
+  #complete-all {
+    background-color: rgb(47, 154, 255, 0.2);
+    padding: 3px;
+    border-radius: 25px;
+    color: white;
+    border: 2px solid rgb(2, 2, 14);
+    cursor: pointer;
+  }
 
-/* D I S P L A Y   T A S K */
-#history-heading {
-  color: gold;
-  font-size: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-/* New oness */
-/* Last section of task Info */
+/* List Element*/
 #list li.checked {
-  text-decoration: line-through;
   text-decoration: line-through rgba(175, 9, 9, 1);
 }
 #list li:hover {
-  /* color: rgb(105, 105, 224); */
   background-color: cadetblue;
   cursor: pointer;
 }
+/* Task Container */
 #task-info {
   border-top: 2px solid white;
   font-family: monospace;
@@ -138,7 +124,7 @@ body {
 #task-type li {
   background-color: rgb(47, 154, 255, 0.2);
   color: white;
-padding: 3px;
+  padding: 3px;
   border: 2px solid rgb(2, 2, 14);
   margin-left: 10%;
   border-radius: 25px;
@@ -146,34 +132,7 @@ padding: 3px;
   cursor: pointer;
 }
 
-/* clear and complete buttons */
-#clear-complete {
-  font-size: 1.2rem;
-  width: 100%;
-  margin: 0%;
-  margin-top: 1%;
-  font-family: monospace;
-  color: rgb(179, 175, 175);
-}
-#clear-all {
-    background-color: rgb(47, 154, 255, 0.2);
-    padding: 3px;
-    border-radius: 25px;
-    margin-right: 4px;
-    border: 2px solid rgb(2, 2, 14);
-  float: right;
-  color: white;
-  cursor: pointer;
-}
-#complete-all {
-    background-color: rgb(47, 154, 255, 0.2);
-    padding: 3px;
-    border-radius: 25px;
-    color: white;
-      border: 2px solid rgb(2, 2, 14);
-  cursor: pointer;
-}
-/* newww */
+
 /* D I S P L A Y     A L L   T A S K */
 #all-tasks {
   padding-left: 2%;
@@ -199,55 +158,17 @@ padding: 3px;
   font-size: 1.5rem;
   /* padding: 1%; */
   color: black !important;
-
-  /* display: none; */
 }
 
 .delete:hover {
   background-color: red;
   z-index: 1;
 }
-#display-task {
-  margin-left: 3%;
-}
-#tasks-container {
-  display: flex;
-  flex-flow: row;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  justify-content: space-between;
-}
-#checkbox-and-description {
-  display: inline-flex;
-  min-width: 75%;
-}
 #task-checkbox {
   margin-top: 4vh;
 }
-.desc-category {
-  height: 100%;
-  width: 8vw;
-  margin-right: 2vh;
-}
-/* C A T E G O R Y */
-.cat-border {
-  font-size: 1rem;
-  color: white;
-  background-color: rgb(50, 68, 150);
-  border: 2px solid rgb(4, 13, 53);
-}
 
-/* C O M P L E T E D     T A S K    C O N T A I N E R      DISPLAY ALL COMPLETED TASK */
-#completed-task {
-  height: 100%;
-  width: 20vw;
-  margin-top: 5vh;
-  float: right;
-  position: initial;
-  overflow-y: scroll;
-}
-
-/* U T I L I T I E S  where is the div for task*/
+/* U T I L I T I E S */
 .border-left-2 {
   border-left: 2px solid white;
   border-bottom: 5px solid white;
@@ -281,6 +202,4 @@ padding: 3px;
 .desc-font {
   font-size: 1rem;
 }
-.reddish {
-  color: rgb(207, 63, 87);
-}
+
